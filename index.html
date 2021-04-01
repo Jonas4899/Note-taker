@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note taker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Train+One&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Note Taker</h1>
+  </header>
+  <main>
+    <!-- Add a new note  -->
+    <h2>Add a new note</h2>
+    <label for="content_note">Note: </label>
+    <input type="text" name="content_note" id="content_note">
+    <button class="add_note">Add Note</button>
+    <!-- Notes list -->
+    <div class="note_list"></div>
+    <!-- Details window -->
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title"></div>
+        <button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body"></div>
+    </div>
+    <div id="overlay"></div>
+  </main>
+</body>
+</html>

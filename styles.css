@@ -1,0 +1,138 @@
+/* General styles
+--------------------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  background-color: #105193;
+  color: #63e97d;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-size: 20px;;
+}
+h1 {
+  font-family: 'Train One', cursive;
+  font-size: 70px;
+  font-weight: 400;
+}
+h2 {
+  font-size: 40px;
+}
+/* Header
+--------------------------------------------- */
+header {
+  border-bottom: 10px solid #63e97d;
+}
+/* Add a new note
+--------------------------------------------- */
+#content_note, .add_note {
+  height: 35px;
+  font-size: inherit;
+}
+#content_note {
+  width: 70%;
+}
+.add_note {
+  background-color: #105193;
+  color: #63e97d;
+  font-weight: bold;
+  border: 2px solid #63e97d;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.add_note:hover {
+  background-color: #63e97d;
+  color: #105193;
+  border: 2px solid #105193;
+}
+/* Notes list
+--------------------------------------------- */
+.note_list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  border: 5px solid #63e97d;
+  border-radius: 20px;
+  margin: 30px auto;
+  width: 90%;
+  padding: 30px;
+}
+.note_list div {
+  background-color: #ffffff;
+  flex: 0 0 40%;
+  margin: 20px;
+  padding: 10px;
+  border: 5px solid #000000;
+  border-radius: 15px;
+  color: #000000;
+}
+.note_list div p {
+  margin: 10px auto;
+  word-break: break-all;
+  width: 80%;
+}
+.note_list div button {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 15px;
+  margin: 0 20px 0 20px;
+}
+/* DETAILS WINDOW
+--------------------------------------------- */
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border: 2px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  color: #000000;
+  width: 500px;
+  max-width: 80%;
+}
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-header {
+  display: flex;
+  padding: 10px 15px;
+  justify-content: space-between;
+  border-bottom: 2PX solid black;
+}
+.modal-header .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.modal-body {
+  padding: 10px 15px;
+  word-break: break-all;
+}
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
